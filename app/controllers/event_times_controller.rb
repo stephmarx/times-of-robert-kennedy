@@ -1,4 +1,4 @@
-class EventTimesControllerController < ApplicationController
+class EventTimesController < ApplicationController
   def index
     @event_times = EventTime.all
   end

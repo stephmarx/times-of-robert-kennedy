@@ -22,11 +22,4 @@ ActiveRecord::Schema.define(version: 20160505163701) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "times", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "image_url"
-    t.datetime "event_time"
-  end
-
 end

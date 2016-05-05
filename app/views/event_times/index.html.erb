@@ -1,0 +1,27 @@
+<ul>
+<% @event_times.each do |event_time| %>
+  <li>
+    <h1>
+      <%= event_time.title %>
+    </h1>
+    <br />
+    <% left = 236 %>
+    <% right = 321 %>
+    <%= image_tag event_time.image_url, size: "236x321" %>
+    <% new_left = left*(0.75) %>
+    <% new_right = right*(0.75) %>
+    <%= image_tag event_time.image_url, size: "#{new_left.to_i.to_s}x#{new_right.to_i.to_s}" %>
+    <% new_left = left*(0.5) %>
+    <% new_right = right*(0.5) %>
+    <%= image_tag event_time.image_url, size: "#{new_left.to_i.to_s}x#{new_right.to_i.to_s}" %>
+    <% new_left = left*(0.25) %>
+    <% new_right = right*(0.25) %>
+    <%= image_tag event_time.image_url, size: "#{new_left.to_i.to_s}x#{new_right.to_i.to_s}" %>
+    <br />
+    <%= event_time.description %>
+    <br />
+    <br />
+  </li>
+
+<% end %>
+</ul>
